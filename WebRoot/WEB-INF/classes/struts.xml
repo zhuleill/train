@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+
+	<package name="user" extends="struts-default,json-default">
+		<!-- class="伪类(spring配置文件中action的id)" -->
+		<action name="user-*" class="userAction" method="{1}">
+			<result name="list">/admin/a_userlist.jsp</result>
+			<result name="delete">/public/success_user_delete.jsp</result>
+			<result name="success">/public/success_user_update.jsp</result>
+			<result name="error">/error.jsp</result>
+			<result name="detail">/admin/a_userdetail.jsp</result>
+			
+			<result name="myinfo">/user/query_userinfo.jsp</result>
+			<result name="myupdate" type="redirectAction">user-getMyInfo</result>
+		</action>
+		
+		<action name="paging-*" class="pagingAction" method="{1}">
+		<result name="userpaging">/admin/a_userlist.jsp</result>
+		<result name="orderpaging">/admin/a_orderlist.jsp</result>
+		<result name="newspaging">/admin/a_newslist.jsp</result>
+		<result name="myorderpaging">/user/ticket_order.jsp</result>
+		<result name="myConnectionpaging">/user/connection.jsp</result>
+		</action>
+		
+			<!-- 登陆 -->
+		<action name="login-*" class="loginAction" method="{1}">
+			<result name="login" type="redirect">/user/user_home.jsp</result>
+			<result name="admin">/admin/a_home.jsp</result>
+			<result name="input">/login.jsp</result>
+		</action>
+		<action name="register-*" class="loginAction" method="{1}">
+			<result name="register">/login.jsp</result>
+			<result name="exist">/login.jsp</result>
+			<result name="existuser" type="json">
+				<param name="root"><!-- 格式拦截器 -->
+					result<!-- result是action中设置的变量名，也是页面需要返回的数据，该变量必须有setter和getter方法 -->
+				</param>
+			</result>
+		</action>
+		
+		<!-- 验证码 -->
+		<action name="rand" class="com.zl.action.RandomAction">
+			<result type="stream">
+				<param name="contentType">image/JPEG</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+		<!-- 获取联系人 -->
+		<action name="connect-*" class="connectionAction" method="{1}">
+			<result name="connect">/user/connection.jsp</result>
+			<result name="orderconnect">/ticket/create_order.jsp</result>
+			<result name="addconnect" type="redirectAction">paging-getMyConnection</result>
+			<result name="deleteconnect" type="redirectAction">paging-getMyConnection</result>
+			<result name="modifyconnect" type="redirectAction">paging-getMyConnection</result>
+			<result name="condetail" type="json">
+				<param name="root"><!-- 格式拦截器 -->
+					detailInfo<!-- result是action中设置的变量名，也是页面需要返回的数据，该变量必须有setter和getter方法 -->
+				</param>
+			</result>
+		</action>
+		
+		<!-- 新闻相关跳转 -->
+		<action name="news-*" class="newsAction" method="{1}">
+			<result name="newslist">/admin/a_newslist.jsp</result>
+			<result name="addnews">/public/success_news_add.jsp</result>
+			<result name="deletenews">/public/success_news_delete.jsp</result>
+			<result name="newsdetail">/admin/a_newsdetail.jsp</result>
+			<result name="updatenews">/public/success_news_update.jsp</result>
+			<result name="newsfind">/ticket/news.jsp</result>
+			<result name="shownews" type="json">
+				<param name="root"><!-- 格式拦截器 -->
+					showNews<!-- trainNum是action中设置的变量名，也是页面需要返回的数据，该变量必须有setter和getter方法 -->
+				</param>
+			</result>
+		</action>
+		
+		
+	</package>
+	
+	<package name="ticket" extends="struts-default,json-default">
+		<action name="ticket-*" class="com.zl.action.TicketAction"
+			method="{1}">
+			<result name="list">/admin/a_orderlist.jsp</result>
+			<result name="delete">/public/success_order_delete.jsp</result>
+			<result name="detail">/admin/a_orderdetail.jsp</result>
+			<result name="success">/public/success_order_update.jsp</result>
+			<result name="error">/error.jsp</result>
+			
+			
+			<result name="fail">/index.jsp</result>
+			<result name="myorder">/user/ticket_order.jsp</result>
+			<result name="createorder" type="redirectAction">paging-getMyOrder</result>
+			<result name="orderdetail">/ticket/create_order.jsp</result>
+			<result name="deleteorder" type="redirectAction">paging-getMyOrder</result>
+			<!-- 返回json类型数据 -->
+			<result name="ticket" type="json">
+				<param name="root"><!-- 格式拦截器 -->
+					result<!-- result是action中设置的变量名，也是页面需要返回的数据，该变量必须有setter和getter方法 -->
+				</param>
+			</result>
+			<result name="checi" type="json">
+				<param name="root"><!-- 格式拦截器 -->
+					trainNum<!-- trainNum是action中设置的变量名，也是页面需要返回的数据，该变量必须有setter和getter方法 -->
+				</param>
+			</result>
+		</action>
+		<action name="*" class="com.zl.action.TicketAction"
+			method="{1}">
+			<result type="json">
+				<param name="root"><!-- 格式拦截器 -->
+					randomMessage<!-- randomMessage是action中设置的变量名，也是页面需要返回的数据，该变量必须有setter和getter方法 -->
+				</param>
+				</result>
+		</action>
+		
+	</package>
+	
+	
+	
+	<!-- ******************test 测试json数据传输********************** -->
+	<package name="simpleton" extends="struts-default,json-default">
+
+		<action name="*JsonAction" method="{1}" class="com.zl.action.JsonAction">
+			<result name="fail">/json_demo.jsp</result>
+			<!-- 返回json类型数据 -->
+			<result type="json">
+				<param name="root">
+					result<!-- result是action中设置的变量名，也是页面需要返回的数据，该变量必须有setter和getter方法 -->
+				</param>
+			</result>
+		</action>
+
+	</package>
+	
+
+</struts>   
+   
+   

@@ -1,0 +1,515 @@
+@charset "utf-8";
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+li {
+	list-style: none;
+	display: list-item;
+	text-align: -webkit-match-parent;
+}
+
+a {
+	color: #07f;
+	text-decoration: none;
+	outline: 0;
+}
+
+div,
+form,
+img,
+ul,
+ol,
+li,
+dl,
+dt,
+dd {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+body{
+	font-size: 12px;
+	font-family: Tahoma;
+}
+input,
+select,
+textarea {
+	font-size: 12px;
+	font-family: Tahoma;
+	line-height: 18px;
+	padding: 0;
+	margin: 0;
+	color: #333;
+	outline: 0;
+}
+
+.content {
+	width: 980px;
+	min-height: 620px;
+	_height: 620px;
+	margin: 0 auto;
+}
+
+
+/*搜索栏*/
+
+.lay-sear {
+	height: 80px;
+	padding: 7px 0;
+	background: #eef1f8;
+	font-size: 14px;
+	border: 1px solid #298cce;
+	margin: 10px 0;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	position: relative;
+	margin-top: 40px;
+}
+
+.lay-sear-station {
+	height: 40px;
+}
+
+.clearfix {
+	display: block;
+}
+
+.lay-sear-station ul {
+	width: 800px;
+	float: left;
+}
+
+.lay-sear li {
+	height: 30px;
+	line-height: 30px;
+	padding: 5px 0;
+	float: left;
+	width: 245px;
+	position: relative;
+}
+
+
+/*日期*/
+
+.lay-sear .label {
+	display: block;
+	width: 72px;
+	height: 30px;
+	line-height: 30px;
+	float: left;
+	margin: 0;
+	padding: 0;
+	padding-right: 5px;
+	text-align: right;
+}
+
+.required {
+	font-size: 16px;
+	color: #f00;
+	font-family: Tahoma;
+	vertical-align: middle;
+	margin-right: 2px;
+	font-weight: 400;
+}
+
+.lay-sear .inp-w {
+	position: relative;
+	width: 152px;
+	height: 30px;
+	float: left;
+	_margin-left: -3px;
+}
+
+.lay-sear .inp-w input {
+	width: 149px;
+}
+
+.color333 {
+	color: #333;
+}
+
+.inptxt {
+	height: 30px;
+	line-height: 30px;
+	border: 1px solid #cfcdc7;
+	background: #fff;
+	color: #999;
+	padding: 5px 0 5px 5px;
+}
+
+.i-date {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	background: url(../img/icon.png) no-repeat;
+	background-position: 0 -250px;
+	overflow: hidden;
+}
+
+
+/*车次*/
+
+.dhx_combo_box {
+	position: relative;
+	text-align: left;
+	border: 1px solid #cfcdc7;
+	height: 24px;
+	_height: 22px;
+	overflow: hidden;
+	background-color: white;
+}
+
+.dhx_combo_input {
+	box-sizing: border-box;
+}
+
+.dhx_combo_input {
+	color: #333;
+	font-family: Arial;
+	font-size: 9pt;
+	border: 0;
+	padding: 2px 2px 2px 2px;
+	position: absolute;
+	top: 0;
+	outline: none 0;
+}
+
+
+/*车次的图标*/
+
+.i-clear {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background: url(../img/icon.png) no-repeat;
+	background-position: 0 -1250px;
+	cursor: pointer;
+}
+
+.dhx_combo_img_iClear {
+	position: absolute;
+	top: 5px;
+	right: 3px;
+	width: 18px;
+	height: 18px;
+}
+
+
+/*验证码*/
+
+.lay-sear .yzm {
+	position: absolute;
+	left: 77px;
+	width: 200px;
+}
+
+.lay-sear .yzm input {
+	float: left;
+	margin-right: 10px;
+	width: 65px;
+}
+
+input.error {
+	border: 1px solid red;
+	color: #999;
+}
+
+.lay-sear .yzm .img {
+	display: block;
+	width: 58px;
+	height: 28px;
+	border: 1px solid #999;
+	margin-right: 10px;
+	float: left;
+}
+
+.lay-sear .yzm .img img {
+	width: 58px;
+	height: 28px;
+}
+
+.i-re {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background-position: 0 -800px;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+.lay-sear .yzm .i-re {
+	display: block;
+	float: left;
+	margin-top: 5px;
+	background: url(../img/icon.png) no-repeat;
+	background-position: 0 -1200px;
+}
+
+
+/*验证码显示*/
+
+.lay-sear .yzm .tips {
+	position: absolute;
+	top: 6px;
+	left: 180px;
+}
+
+.i-ok {
+	display: block;
+	width: 14px;
+	height: 14px;
+	background: url(../img/icon.png) no-repeat;
+	background-position: 0 -600px;
+}
+
+.lay-sear .btn-area {
+	float: left;
+	width: 430px;
+	margin-top: 25px;
+	text-align: center;
+}
+
+.lay-sear-station .btn-area {
+	width: 125px;
+	margin-top: 5px;
+}
+
+.lay-sear .btn-area a {
+	margin: 0 5px;
+}
+
+.btn122s {
+	width: 122px;
+	height: 30px;
+	line-height: 30px;
+	background-position: 0 0;
+	color: #fff;
+	display: inline-block;
+	text-align: center;
+	background: url(../img/bg_btn.png) repeat-x;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+
+/*显示结果大概数据样式*/
+
+.sear-result {
+	height: 23px;
+	line-height: 23px;
+	position: relative;
+	width: 100%;
+	padding: 6px 0;
+	margin-top:-5px;
+	font-size: 12px;
+	font-family: Tahoma, "宋体";
+}
+
+strong,
+b {
+	font-weight: bold;
+}
+
+
+/*查询结果样式*/
+
+table{
+	border-spacing: 0;
+}
+
+.t-list {
+    border: 1px solid #298cce;
+    font-size: 12px;
+    font-family: Tahoma,"宋体";
+}
+.t-list table {
+    width: 100%;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+.t-list table {
+    width: 100%;
+    table-layout: fixed;
+    word-wrap: break-word;
+    background: url(../img/bg_tlisthd.png) top repeat-x;
+    margin-top: 0;
+}
+.t-list th {
+    height: 52px;
+    background: url(../img/line_tlisth.png) right center no-repeat;
+    color: #fff;
+    overflow: hidden;
+    font-size: 12px;
+	font-family: Tahoma;
+}
+.t-list .last {
+    background: 0;
+}
+/*车票数据*/
+.t-list .bgc td {
+    background: #eef1f8;
+}
+.t-list td .train-number {
+    width: 368px;
+}
+.t-list td .ticket-info {
+    width: 368px;
+    height: 36px;
+    line-height: 18px;
+    padding: 0;
+    position: relative;
+    text-align: left;
+}
+.clearfix {
+    display: block;
+}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.ticket-info .t-num {
+    float: left;
+    width: 40px;
+    text-align: center;
+}
+.t-list .t-num {
+    color: #333;
+    font-weight: 700;
+}
+.ticket-info .t-station {
+    float: left;
+    width: 80px;
+    text-align: center;
+    font-weight: 700;
+    color: #333;
+}
+.ticket-info .t-train {
+    float: left;
+    width: 60px;
+    position: relative;
+    text-align: right;
+    padding-right: 40px;
+}
+.t-list .cds {
+    width: 70px;
+    float: left;
+    font-family: Tahoma;
+    font-size: 14px;
+    color: #333;
+}
+.t-list td strong {
+    color: #333;
+}
+.t-list .start-t {
+    width: 70px;
+    display: block;
+    height: 18px;
+    line-height: 18px;
+    float: left;
+    overflow: hidden;
+}
+.t-list .ls {
+    width: 72px;
+    float: left;
+    color: #333;
+    font-size: 14px;
+	font-family: Tahoma;
+    padding-left: 6px;
+}
+.t-list .ls strong {
+    display: block;
+    height: 18px;
+    line-height: 18px;
+    overflow: hidden;
+}
+/*列车类型的--*/
+.t-list td {
+    border-right: 1px solid #b0cedd;
+    border-top: 1px solid #b0cedd;
+    color: #999;
+    height: 36px;
+    padding: 2px 0;
+    text-align: center;
+}
+
+
+.no-ticket {
+    width: 500px;
+    margin: 120px auto 260px;
+    height: 66px;
+    line-height: 33px;
+}
+.i-no {
+    display: block;
+    width: 66px;
+    height: 66px;
+    background: url(../img/bg02.png) repeat-x;
+    background-position: -60px 0;
+}
+.no-ticket p {
+    line-height: 30px;
+    font-size: 16px;
+    color: #aaa;
+    font-weight: 700;
+    padding-top: 5px;
+}
+
+/*尾部*/
+
+.footer {
+    height: 60px;
+    line-height: 20px;
+    padding: 20px 0;
+    border-top: 2px solid #468dcd;
+    background: #f6f6f6;
+    margin-top: 10px;
+    text-align: center;
+    color: #999;
+    font-size: 12px;
+    font-family: Tahoma,"宋体";
+}
+
+
+.return-top {
+    display: block;
+    width: 42px;
+    height: 42px;
+    background: url(../img/bg_return.png) no-repeat;
+    position: fixed;
+    bottom: 60px;
+    right: 30px;
+}
+
+div.dhx_modal_cover {
+    border: currentColor;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: fixed;
+    filter: alpha(opacity=50);
+    opacity: .5;
+    z-index: 19999;
+    cursor: default;
+    zoom: 1;
+    background-color: rgba(0,0,0,255);
+}

@@ -1,0 +1,661 @@
+@charset "utf-8";
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	border: 0;
+}
+
+
+
+/*--------------------content----------------------*/
+.content {
+	width: 980px;
+	min-height: 620px;
+	margin: 0 auto;
+}
+
+
+/*-----------------搜索框样式-----------------*/
+
+
+/*单选按钮*/
+
+.sear-box {
+	height: 48px;
+	padding: 7px 10px;
+	background: #eef1f8;
+	font-size: 12px;
+	padding: 12px 10px;
+	border: 1px solid #298cce;
+	margin-top: 10px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+.dfc {
+	float: left;
+	margin-right: 5px;
+	width: 60px;
+	background: url(../img/line_sear.png) right center repeat-y;
+}
+
+.sear-box .dfc li {
+	line-height: 44px;
+	height: 44px;
+	padding: 2px;
+}
+.radio {
+	vertical-align: -3px;
+	margin-right: 4px;
+}
+.cursor {
+	cursor: pointer;
+}
+
+
+/*---输入框样式---*/
+
+.sear-box .s-info {
+	float: left;
+	margin-right: 15px;
+}
+
+.s-info li {
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	padding: 10px 15px;
+	white-space: nowrap;
+}
+
+
+/*出发地*/
+
+.sear-box .inp-w {
+	position: relative;
+	width: 146px;
+	height: 30px;
+	float: left;
+}
+
+.sear-box .inp-w .inp-txt {
+	width: 143px;
+	height: 30px;
+	line-height: 30px;
+	border: 1px solid #cfcdc7;
+	background: #fff;
+	padding: 5px 0 5px 5px;
+	color: #999;
+}
+
+.sear-box .label {
+	display: block;
+	width: 40px;
+	float: left;
+	margin: 0;
+	padding: 0;
+	padding-right: 2px;
+	text-align: right;
+}
+
+.i-city {
+	background: url(../img/icon.png) no-repeat;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	background-position: 0 -150px;
+	overflow: hidden;
+}
+
+.s-info .i-change {
+	width: 16px;
+	height: 16px;
+	background: url(../img/bg02.png) repeat-x;
+	background-position: -67px -96px;
+	margin-top: 18px;
+	margin-left: 5px;
+	cursor: pointer;
+	padding: 0;
+}
+
+
+/*日期选择*/
+
+.inp_selected {
+	width: 143px;
+	height: 30px;
+	line-height: 30px;
+	border: 1px solid #cfcdc7;
+	background: #fff;
+	padding: 5px 0 5px 5px;
+	color: #333;
+	font-size: 12px;
+	font-family: Tahoma;
+}
+
+.i-date {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	background: url(../img/icon.png) no-repeat;
+	background-position: 0 -250px;
+	overflow: hidden;
+}
+
+
+/*--查询按钮样式设计--*/
+
+.sear-box .quick-s {
+	float: left;
+	width: 184px;
+	height: 58px;
+	overflow: hidden;
+	background: url(../img/line_sear.png) left center no-repeat;
+	padding-left: 15px;
+	margin-top: -5px;
+}
+
+.sear-box .quick-s ul {
+	width: 70px;
+	float: left;
+	margin-top: 4px;
+}
+
+.sear-box .quick-s ul li {
+	height: 23px;
+	line-height: 23px;
+	overflow: hidden;
+}
+
+.sear-box .radio {
+	vertical-align: -3px;
+	margin-right: 4px;
+}
+
+
+/*查询按钮*/
+
+.sear-box .quick-s .btn-area {
+	width: 98px;
+	height: 38px;
+	overflow: hidden;
+	float: left;
+	margin-top: 13px;
+}
+
+.btn-query-ticket {
+	height: 30px;
+	width: 92px;
+	line-height: 30px;
+	background-position: 0 0;
+	color: #fff;
+	display: inline-block;
+	text-align: center;
+	background: url(../img/bg_btn.png) repeat-x;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+
+/*--快速选择选票框--*/
+
+.sear-sel {
+	margin-top: 10px;
+	font-size: 12px;
+	font-family: Tahoma, "宋体";
+	position: relative;
+}
+
+.sear-sel-hd {
+	height: 28px;
+	border: 1px solid #999;
+	border-bottom: 0;
+	color: #333;
+	background: url(../img/bg.png) repeat-x;
+	background-position: 0 -100px;
+	position: relative;
+	z-index: 100;
+}
+
+.clearfix {
+	display: block;
+}
+
+
+/*.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}*/
+
+.sear-sel-hd .sel {
+	width: 141px;
+	position: relative;
+}
+
+.sear-sel-hd .sel .first {
+	left: -1px;
+}
+
+.sear-sel-hd .sel span {
+	background: #fff;
+	color: #3391d0;
+	font-weight: 700;
+	line-height: 28px;
+	text-align: center;
+	width: 145px;
+	height: 30px;
+	background: url(../img/bg_s.png) no-repeat;
+	position: absolute;
+	top: -1px;
+	left: -2px;
+	z-index: 10;
+	overflow: hidden;
+	display: block;
+	height: 29px;
+	cursor: pointer;
+}
+
+.sear-sel-hd li {
+	float: left;
+	width: 42px;
+	height: 28px;
+	line-height: 28px;
+	padding-right: 2px;
+	background: url(../img/line_searsel.png) right center no-repeat;
+}
+
+.sear-sel-hd li .hide {
+	display: none;
+}
+
+.sear-sel-hd li span {
+	display: block;
+	height: 28px;
+	line-height: 28px;
+	text-align: center;
+	overflow: hidden;
+}
+
+.sear-sel-hd .end {
+	padding-right: 0;
+	background: 0;
+}
+/*选择车次*/
+.sear-sel-bd {
+    border: 1px solid #3391d0;
+    height: 44px;
+    overflow: hidden;
+    position: relative;
+    padding: 3px 0;
+}
+.sear-sel-bd .pos-top {
+    position: absolute;
+    top: 8px;
+    right: 0;
+    z-index: 10;
+    height: 22px;
+    line-height: 22px;
+}
+input, select, textarea {
+    font-size: 12px;
+    font-family: Tahoma;
+    line-height: 18px;
+    padding: 0;
+    margin: 0;
+    color: #333;
+    outline: 0;
+}
+
+.sear-sel-bd .pos-top .select-small {
+    margin-right: 10px;
+    border: 1px solid #999;
+    vertical-align: middle;
+    width: 103px;
+    height: 20px;
+    line-height: 22px;
+    padding: 1px 0;
+    font-size: 12px;
+    font-family: Tahoma;
+}
+option {
+    font-weight: normal;
+    display: block;
+    white-space: pre;
+    min-height: 1.2em;
+    padding: 0px 2px 1px;
+}
+
+.clearfix {
+    display: block;
+    margin-top: 6px;
+}
+.sear-sel .section-hd {
+    width: 80px;
+    height: 18px;
+    line-height: 18px;
+    padding: 2px 0;
+    float: left;
+    text-align: right;
+    font-weight: 700;
+}
+.sear-sel .section-bd {
+    float: left;
+    width: 898px;
+    position: relative;
+}
+.sear-sel .btn-all {
+    display: block;
+    width: 33px;
+    height: 18px;
+    line-height: 18px;
+    padding: 2px 0;
+    font-size: 12px;
+    background: url(../img/bg02.png) repeat-x;
+    background-position: 0 -347px;
+    float: left;
+    margin-right: 10px;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+}
+
+.sear-sel .section-bd ul {
+    float: left;
+    width: 850px;
+}
+.sear-sel .section-bd ul li {
+    float: left;
+    width: 95px;
+    height: 18px;
+    line-height: 18px;
+    padding: 2px 0;
+    overflow: hidden;
+}
+.check {
+    vertical-align: -3px;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+/*显示出发与目的地和车的列数*/
+
+.sear-result {
+    height: 23px;
+    line-height: 23px;
+    position: relative;
+    width: 100%;
+    padding: 6px 0;
+}
+
+
+/*显示车票数据标题*/
+.t-list {
+    border: 1px solid #298cce;
+}
+.t-list table {
+    width: 100%;
+    table-layout: fixed;
+    word-wrap: break-word;
+    background: url(../img/bg_tlisthd.png) top repeat-x;
+    margin-top: 0;
+    border: 0;
+    font-size: 12px;
+    border-spacing: 0;
+}
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+.t-list th {
+    height: 52px;
+    background: url(../img/line_tlisth.png) right center no-repeat;
+    color: #fff;
+    overflow: hidden;
+    font-weight: bold;
+}
+.t-list .last {
+    background: 0;
+}
+
+/*显示列车*/
+.t-list .bgc td {
+    background: #eef1f8;
+}
+.t-list td {
+    border-right: 1px solid #b0cedd;
+    border-top: 1px solid #b0cedd;
+    color: #999;
+    font-size: 12px;
+    height: 36px;
+    padding: 2px 0;
+    text-align: center;
+}
+.t-list td .ticket-info {
+    width: 354px;
+    height: 36px;
+    line-height: 18px;
+    padding: 0;
+    position: relative;
+    text-align: left;
+}
+.t-list .train {
+    width: 90px;
+    height: 36px;
+    float: left;
+    margin-right: 10px;
+    position: relative;
+}
+
+.t-list .train .number {
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+    display: inline-block;
+    width: 60px;
+    height: 36px;
+    line-height: 36px;
+    overflow: hidden;
+    margin-right: 6px;
+    text-align: right;
+    font-weight: 700;
+    cursor: default;
+}
+
+.t-list .lookup b {
+    display: block;
+    width: 10px;
+    height: 5px;
+    overflow: hidden;
+    background: url(../img/icon8.png) no-repeat;
+    background-position: 0 -55px;
+    vertical-align: middle;
+    position: absolute;
+    top: 17px;
+    right: 12px;
+}
+
+.t-list .lookup .open {
+    background-position: 0 -50px;
+}
+
+.t-list .cdz {
+    width: 100px;
+    float: left;
+}
+.t-list .cdz .start-s {
+	background: url(../img/icon.png) no-repeat;
+    background-position: 0 -546px;
+}
+.t-list .cdz strong {
+    display: block;
+    padding-left: 18px;
+    height: 18px;
+    line-height: 18px;
+    overflow: hidden;
+    background: url(../img/icon.png) no-repeat;
+    background-position: 0 -446px;
+}
+.t-list .cdz .end-s {
+    display: block;
+    background: url(../img/icon.png) no-repeat;
+    background-position: 0 -496px;
+}
+.t-list .cds {
+    width: 70px;
+    float: left;
+    font-family: Tahoma;
+    font-size: 14px;
+    color: #333;
+}
+.t-list .start-t {
+    width: 70px;
+    display: block;
+    height: 18px;
+    line-height: 18px;
+    /*float: left;*/
+    overflow: hidden;
+}
+.t-list td strong {
+    color: #333;
+}
+.t-list td .color999 {
+    color: #999;
+}
+.t-list .ls {
+    width: 66px;
+    float: left;
+    color: #333;
+    padding-left: 18px;
+}
+.t-list .ls strong {
+    display: block;
+    height: 18px;
+    line-height: 18px;
+    overflow: hidden;
+}
+.t-list .no-br {
+    border-right: 0;
+}
+.btnorder{
+    height: 30px;
+    line-height: 30px;
+    width: 72px;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    background: url(../img/bg_btn.png) repeat-x;
+    background-position: 0 -250px;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    -webkit-border-radius: 4px;
+}
+
+a {
+    color: #07f;
+    text-decoration: none;
+    outline: 0;
+}
+.t-list .yes {
+    color: #26a306;
+    font-weight: 400;
+}
+
+.t-list .t-num {
+    color: #333;
+    font-weight: 700;
+}
+
+.t-list .p-num {
+    color: #fc8302;
+    font-family: Arial,Simsun;
+}
+
+/*没查询到*/
+.no-ticket {
+    width: 500px;
+    margin: 120px auto 260px;
+    height: 66px;
+    line-height: 33px;
+}
+.no-ticket .i-no {
+    display: block;
+    float: left;
+    margin-right: 10px;
+}
+.i-no {
+    display: block;
+    width: 66px;
+    height: 66px;
+    background: url(../img/bg02.png) repeat-x;
+    background-position: -60px 0;
+}
+.no-ticket p {
+    line-height: 30px;
+    font-size: 16px;
+    color: #aaa;
+    font-weight: 700;
+    padding-top: 5px;
+}
+
+
+/*结尾*/
+.footer {
+    height: 60px;
+    line-height: 20px;
+    padding: 20px 0;
+    border-top: 2px solid #468dcd;
+    background: #f6f6f6;
+    margin-top: 10px;
+    text-align: center;
+    color: #999;
+    font-size: 12px;
+    font-family: Tahoma,"宋体";
+}
+
+.return-top {
+    display: block;
+    width: 42px;
+    height: 42px;
+    background: url(../img/bg_return.png) no-repeat;
+    position: fixed;
+    bottom: 60px;
+    right: 30px;
+}
+
+div.dhx_modal_cover {
+    border: currentColor;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: fixed;
+    filter: alpha(opacity=50);
+    opacity: .5;
+    z-index: 19999;
+    cursor: default;
+    zoom: 1;
+    background-color: rgba(0,0,0,255);
+}

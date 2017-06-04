@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.zl.entity.Ticket" table="ticket">
+		<id name="price_list" column="price_list">
+			<generator class="native"></generator>
+		</id>
+		<property name="uid"></property>
+		<property name="train_type"></property>
+		<property name="start_station"></property>
+		<property name="card_type"></property>
+		<property name="end_station"></property>
+		<property name="card_number"></property>
+		<property name="start_time"></property>
+		<property name="end_time"></property>
+		<property name="real_name"></property>
+		<property name="train_no"></property>
+		<set name="price_Lists" cascade="all-delete-orphan" lazy="false">
+			<key column="price_list"></key>
+			<one-to-many class="com.zl.entity.Price_List"/>
+		</set>
+	</class>
+</hibernate-mapping>

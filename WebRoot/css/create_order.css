@@ -1,0 +1,280 @@
+@charset "utf-8";
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	border: 0;
+}
+
+/*--------------------content----------------------*/
+.content {
+	width: 980px;
+	min-height: 420px;
+	margin: 0 auto;
+}
+body{
+	font-size: 12px;
+    font-family: Tahoma,"宋体";
+}
+/*-----------------列车信息-----------------*/
+.t-info {
+    margin-top: 10px;
+}
+.layout {
+    border: 1px solid #1678be;
+    border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    -ms-border-radius: 5px 5px 0 0;
+    -o-border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+    background: url(../img/bg.png) repeat-x;
+    background-position: 0 -400px;
+}
+.layout .lay-hd {
+    height: 32px;
+    line-height: 30px;
+    color: #e5f8ff;
+    padding-left: 20px;
+    font-size: 14px;
+    position: relative;
+}
+.layout .lay-hd .small {
+    font-size: 12px;
+}
+.t-info .lay-bd {
+    background: #eef1f8;
+    padding: 0 10px 0;
+    border-top: 0;
+}
+.t-info .t-tit {
+    border-bottom: 1px dashed #999;
+}
+.t-info p {
+    line-height: 32px;
+}
+.t-info .t-tit strong {
+    font-size: 16px;
+}
+.mr5 {
+    margin-right: 5px;
+}
+strong, b {
+    font-weight: bold;
+}
+.ml5 {
+    margin-left: 5px;
+}
+.t-info .s1 {
+    margin-right: 25px;
+    color: #333;
+}
+.colorA {
+    color: #fb7403;
+}
+/*-----------------乘客信息-----------------*/
+.person {
+    margin-top: 10px;
+}
+.person .lay-bd {
+    background: #fff;
+    padding: 5px 10px 0 10px;
+}
+.per-sel {
+	height:24px;
+    border-bottom: 1px dashed #999;
+    padding-bottom: 5px;
+}
+.per-sel .item {
+    position: relative;
+}
+
+.per-sel .cy {
+	    background: url(../img/icon.png) no-repeat;
+    background-position: 10px -698px;
+}
+.per-sel h2 {
+    width: 40px;
+    height: 24px;
+    float: left;
+    text-indent: -9999px;
+}
+.per-sel ul {
+    float: left;
+    width: 880px;
+}
+.per-sel li {
+    float: left;
+    width: 110px;
+    height: 20px;
+    line-height: 20px;
+    padding: 2px 0;
+    overflow: hidden;
+}
+.check {
+    vertical-align: -3px;
+    _vertical-align: middle;
+    margin-right: 4px;
+}
+input, select, textarea {
+    font-size: 12px;
+    font-family: Tahoma;
+    line-height: 18px;
+    padding: 0;
+    margin: 0;
+    color: #333;
+    outline: 0;
+}
+
+
+
+.per-ticket {
+    width: 100%;
+    border: 1px solid #999;
+    margin-top: 10px;
+    background: #eef1f8;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.per-ticket th {
+	font-size: 12px;
+    font-family: Tahoma,"宋体";
+    height: 28px;
+    line-height: 28px;
+    text-align: left;
+    padding-left: 5px;
+    font-weight: 400;
+    border-bottom: 1px solid #999;
+    background: url(../img/bg.png) repeat-x;
+    background-position: 0 -200px;
+}
+.per-ticket td {
+    height: 30px;
+    line-height: 30px;
+    padding: 4px 0 4px 5px;
+}
+select {
+    height: 30px;
+    line-height: 30px;
+    padding: 5px 0;
+    _position: relative;
+    _top: 6px;
+}
+.pos-rel {
+    position: relative;
+}
+.inptxt {
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #cfcdc7;
+    background: #fff;
+    color: #999;
+    padding: 5px 0 5px 5px;
+}
+.w160 {
+    width: 165px;
+}
+.w110 {
+    width: 155px;
+}
+.i-del {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(../img/icon.png) no-repeat;
+    background-position: 0 -350px;
+    vertical-align: middle;
+}
+.add-per {
+    border-bottom: 1px dashed #999;
+}
+.add-per span {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    background: url(../img/icon.png) no-repeat;
+    background-position: 0 -43px;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+/*--------------------btn-----------------------*/
+.lay-btn {
+    height: 30px;
+    padding: 10px 0;
+    text-align: center;
+}.lay-btn a {
+    margin: 0 10px;
+}
+.btn92 {
+    width: 90px;
+    height: 28px;
+    line-height: 28px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    text-align: center;
+    background: url(../img/bg_btn.png) repeat-x;
+    background-position: 0 -100px;
+    color: #333;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    -webkit-border-radius: 4px;
+}
+.btn92s {
+    width: 92px;
+    height: 30px;
+    line-height: 30px;
+    background-position: 0 0;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    background: url(../img/bg_btn.png) repeat-x;
+    color: #333;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    -webkit-border-radius: 4px;
+}
+
+/*结尾*/
+.footer {
+    height: 60px;
+    line-height: 20px;
+    padding: 20px 0;
+    border-top: 2px solid #468dcd;
+    background: #f6f6f6;
+    margin-top: 10px;
+    text-align: center;
+    color: #999;
+    font-size: 12px;
+    font-family: Tahoma,"宋体";
+}
+
+.return-top {
+    display: block;
+    width: 42px;
+    height: 42px;
+    background: url(../img/bg_return.png) no-repeat;
+    position: fixed;
+    bottom: 60px;
+    right: 30px;
+}
+div.dhx_modal_cover {
+    border: currentColor;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: fixed;
+    filter: alpha(opacity=50);
+    opacity: .5;
+    z-index: 19999;
+    cursor: default;
+    zoom: 1;
+    background-color: rgba(0,0,0,255);
+}

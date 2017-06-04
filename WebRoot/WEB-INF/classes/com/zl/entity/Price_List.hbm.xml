@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.zl.entity.Price_List" table="price_list">
+		<id name="price_no" column="price_no">
+			<generator class="native"></generator>
+		</id>
+		<property name="price_type"></property>
+		<property name="price"></property>
+		<many-to-one name="tickets" class="com.zl.entity.Ticket"
+			 column="price_list" >
+		</many-to-one>
+	</class>
+</hibernate-mapping>  

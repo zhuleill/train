@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:aop="http://www.springframework.org/schema/aop"
+		xmlns:tx="http://www.springframework.org/schema/tx" 
+		xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+		<!-- 配置数据源 -->	
+		<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+			<!-- 驱动名称 -->
+			<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+			<!-- url -->
+			<property name="url" value="jdbc:mysql://localhost:3306/db?useUnicode=true&amp;characterEncoding=UTF-8"></property>
+			<!-- 用户名 -->
+			<property name="username" value="root"></property>
+			<!-- 密码 -->
+			<property name="password" value="admin"></property>
+		</bean>
+		<!-- 配置sessionFactory,注入dataSource -->
+		<bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+			<!-- 注入dataSource -->
+			<property name="dataSource" ref="dataSource"></property>
+			<!-- 引入映射文件的位置 -->
+			<property name="mappingResources">
+				<list>
+					<value>com/zl/entity/Userinfo.hbm.xml</value>
+					<value>com/zl/entity/Ticket.hbm.xml</value>
+					<value>com/zl/entity/Price_List.hbm.xml</value> 
+					<value>com/zl/entity/Connection.hbm.xml</value> 
+					<value>com/zl/entity/News.hbm.xml</value>
+				</list>
+			</property>
+			<property name="hibernateProperties">
+				<props>
+					<prop key="hibernate.show_sql">true</prop>
+					<prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
+				</props>
+			</property>
+		</bean>
+		
+		<!-- 配置loginAction,并注入userBiz -->
+		<bean id="loginAction" class="com.zl.action.LoginAction">
+			<property name="userBiz" ref="userBiz"></property>
+		</bean>
+		
+		<!-- 配置userDao,并注入sessionFactory -->
+		<bean id="userDao" class="com.zl.dao.impl.UserinfoDaoImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		<!-- 配置userBiz,并注入userDao -->
+		<bean id="userBiz" class="com.zl.biz.impl.UserinfoBizImpl">
+			<property name="userDao" ref="userDao"></property>
+		</bean>
+		<!-- 配置userAction,并注入userBiz -->
+		<bean id="userAction" class="com.zl.action.UserinfoAction">
+			<property name="userBiz" ref="userBiz"></property>
+		</bean>
+		
+		<!-- 配置ticketDao,并注入sessionFactory -->
+		<bean id="ticketDao" class="com.zl.dao.impl.TicketDaoImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		<!-- 配置ticketBiz,并注入ticketDao和price_ListDao -->
+		<bean id="ticketBiz" class="com.zl.biz.impl.TicketBizImpl">
+			<property name="ticketDao" ref="ticketDao"></property>
+			<property name="price_ListDao" ref="price_ListDao"></property>
+		</bean>
+		<bean id="ticketAction" class="com.zl.action.TicketAction">
+			<property name="ticketBiz" ref="ticketBiz"></property>
+		</bean>
+		
+		
+		<!-- 配置price_ListDao,并注入sessionFactory -->
+		<bean id="price_ListDao" class="com.zl.dao.impl.Price_ListDaoImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		<!-- 配置price_ListBiz,并注入price_ListDao -->
+		<bean id="price_ListBiz" class="com.zl.biz.impl.Price_ListBizImpl">
+			<property name="price_ListDao" ref="price_ListDao"></property>
+		</bean>
+		
+		
+		<!-- 配置ConnectionDao,并注入sessionFactory -->
+		<bean id="connectionDao" class="com.zl.dao.impl.ConnectionDaoImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		<!-- 配置ConnectionBiz,并注入connectionDao -->
+		<bean id="connectionBiz" class="com.zl.biz.impl.ConnectionBizImpl">
+			<property name="connectionDao" ref="connectionDao"></property>
+		</bean>
+		<!-- 配置ConnectionAction,并注入connectionBiz -->
+		<bean id="connectionAction" class="com.zl.action.ConnectionAction">
+			<property name="connectionBiz" ref="connectionBiz"></property>
+			<property name="userBiz" ref="userBiz"></property>
+		</bean>
+		
+		
+		<!-- 配置ConnectionDao,并注入sessionFactory -->
+		<bean id="newsDao" class="com.zl.dao.impl.NewsDaoImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		<!-- 配置ConnectionBiz,并注入connectionDao -->
+		<bean id="newsBiz" class="com.zl.biz.impl.NewsBizImpl">
+			<property name="newsDao" ref="newsDao"></property>
+		</bean>
+		<!-- 配置ConnectionAction,并注入connectionBiz -->
+		<bean id="newsAction" class="com.zl.action.NewsAction">
+			<property name="newsBiz" ref="newsBiz"></property>
+		</bean>
+		
+		
+		<bean id="memberDao" class="com.zl.dao.impl.MemberDaoImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		<bean id="pagingBiz" class="com.zl.biz.impl.PagingBizImpl">
+			<property name="memberDao" ref="memberDao"></property>
+		</bean>
+		<bean id="pagingAction" class="com.zl.action.ListPagingAction">
+			<property name="pagingBiz" ref="pagingBiz"></property>
+		</bean>
+		
+		
+		
+	  <!-- 配置声明式事务 -->
+		<!-- 配置事务管理器,注入sessionFactory -->
+		<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>		
+		<!-- 配置事务通知 -->
+		<tx:advice id="txAdvice" transaction-manager="transactionManager">
+			<tx:attributes>
+				<tx:method name="add*" propagation="REQUIRED"/>
+				<tx:method name="update*" propagation="REQUIRED"/>
+				<tx:method name="delete*" propagation="REQUIRED"/>
+				<tx:method name="*" propagation="SUPPORTS"/>
+			</tx:attributes>
+		</tx:advice>
+		<aop:config>
+			<!-- 定义切入点 -->
+			<aop:pointcut expression="execution(* com.zl.biz.*.*(..))" id="bizMethods"/>
+			<!-- 将事务通知和切入点告知给通知者 -->
+			<aop:advisor advice-ref="txAdvice" pointcut-ref="bizMethods"/>
+		</aop:config>
+</beans>			

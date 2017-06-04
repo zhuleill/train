@@ -1,0 +1,433 @@
+/*温馨提示样式*/
+@charset "utf-8";
+*{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+
+.cursor {
+    cursor: pointer;
+}
+.ban-area {
+	font-size: 12px;
+    font-family: Tahoma,"宋体";
+    width: 1000px;
+    height: 30px;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+.notice {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    z-index: 10;
+    width: 938px;
+    height: 22px;
+    padding: 0 20px;
+    margin-top: 6px;
+    line-height: 22px;
+    background: #FFFBE5;
+    border: 1px solid #FBD800;
+    color: #FF2626;
+}
+.notice strong {
+    display: block;
+    width: 40px;
+    height: 22px;
+    line-height: 22px;
+    float: left;
+    font-weight: 400;
+}
+.notice .notice_in {
+    margin-left: 40px;
+    height: 22px;
+    overflow: hidden;
+}
+.notice ul li {
+    height: 22px;
+    line-height: 22px;
+    overflow: hidden;
+}
+.notice .i-close {
+    position: absolute;
+    top: 2px;
+    right: 10px;
+}
+.i-close {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(../img/icon.png) no-repeat;
+    background-position: 0 -350px;
+}
+/*--------主体部分的查询车票部分----------*/
+.content {
+	font-size: 12px;
+    font-family: Tahoma,"宋体";
+    width: 980px;
+    min-height: 400px;
+    _height: 400px;
+    margin: 0 auto;
+}
+.pt10 {
+    padding-top: 10px;
+}
+.clearfix {
+    display: block;
+}
+.index-side {
+    width: 350px;
+    float: left;
+}
+.booking {
+    width: 348px;
+    margin-bottom: 5px;
+}
+.layout {
+    border: 1px solid #1678BE;
+    border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    -ms-border-radius: 5px 5px 0 0;
+    -o-border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+    background: url(../img/bg.png) repeat-x;
+    background-position: 0 -400px;
+}
+.layout .lay-hd {
+    height: 32px;
+    line-height: 30px;
+    color: #E5F8FF;
+    padding-left: 20px;
+    font-size: 14px;
+    position: relative;
+}
+.layout .lay-bd {
+    background: #EEF1F8;
+    border-top: none;
+}
+.booking-in {
+    width: 308px;
+    margin: 0 auto;
+    padding-bottom: 3px;
+}
+.booking-hd {
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-bottom: 1px solid #5fb0dc;
+    padding: 10px 0 10px 18px;
+    margin-left: 5px;
+}
+
+
+/*输入标签的样式*/
+input{
+    font-size: 12px;
+    font-family: Tahoma;
+    line-height: 18px;
+    padding: 0;
+    margin: 0;
+    color: #333;
+    outline: none;
+}
+.booking-bd {
+    position: relative;
+}
+.booking-bd ul {
+    margin: 15px 0 0 0;
+}
+.booking-bd li {
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    white-space: nowrap;
+    padding: 2px 0;
+}
+.booking-bd .label {
+    display: block;
+    padding-right: 25px;
+    width: 60px;
+    text-align: right;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+}
+.booking-bd li .inp-w {
+    position: relative;
+    width: 200px;
+    height: 30px;
+    float: left;
+}
+.inp-txt {
+    width: 197px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #CFCDC7;
+    background: #fff;
+    padding: 5px 0 5px 5px;
+    color: #999;
+}
+
+.i-city {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: url(../img/icon.png) no-repeat;
+    background-position: 0 -150px;
+    overflow: hidden;
+}
+/*出发日期*/
+.mt10 {
+    margin-top: 20px;
+}
+.i-date {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: url(../img/icon.png) no-repeat;
+    background-position: 0 -250px;
+    overflow: hidden;
+}
+.radio {
+    vertical-align: -3px;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+/*交换车站样式*/
+.booking-bd .i-change {
+    position: absolute;
+    top: 12px;
+    right: 0;
+}
+.i-change {
+    display: block;
+    width: 23px;
+    height: 46px;
+    background: url(../img/bg02.png) repeat-x;
+    background-position: -60px -80px;
+}
+/*查询按钮样式*/
+.tc {
+    text-align: center;
+}
+.btn-login {
+    display: block;
+    width: 225px;
+    height: 30px;
+    line-height: 30px;
+    margin: 5px auto;
+    font-size: 16px;
+    background: url(../img/bg_btn.png) repeat-x;
+    background-position: 0 0px;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    -webkit-border-radius: 4px;
+}
+/*--------主体部分的查询车票部分结束----------*/
+.guide {
+    width: 348px;
+    float: left;
+}
+}
+.layout .lay-hd {
+    height: 32px;
+    line-height: 30px;
+    color: #E5F8FF;
+    padding-left: 20px;
+    font-size: 14px;
+    position: relative;
+}
+.guide .lay-bd {
+    width: 348px;
+    height: 90px;
+    overflow: hidden;
+    padding-top: 5px;
+}
+.layout .lay-bd {
+    background: #EEF1F8;
+    border-top: none;
+}
+.guide ul {
+    overflow: hidden;
+    zoom: 1;
+}
+.guide li {
+    width: 69px;
+    margin: 0 23px;
+    padding-top: 5px;
+    float: left;
+    text-align: center;
+}
+.guide li a {
+    color: #666;
+}
+
+.guide li .img {
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    background: url(../img/icon_guide.png) no-repeat;
+}
+.guide li .tgcz {
+    background-position: 0 0;
+}
+.guide li .zzcx {
+    background-position: 0 -120px;
+}
+.guide li .dsd {
+    background-position: 0 -240px;
+}
+/*新闻选项标题*/
+.slideTxt {
+    width: 618px;
+    height: 422px;
+    overflow: hidden;
+    border: 1px solid #1678be;
+    border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    -ms-border-radius: 5px 5px 0 0;
+    -o-border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+    background: url(../img/bg.png) repeat-x;
+    background-position: 0 -400px;
+    float: right;
+}
+.slideTxt .hd {
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.slideTxt .hd ul {
+    float: left;
+    height: 32px;
+}
+.slideTxt .hd ul li {
+    float: left;
+    width: 92px;
+    padding: 0 6px 0 4px;
+    text-align: center;
+    background: url(../img/bg_line.png) right center no-repeat;
+    cursor: pointer;
+    color: #fff;
+}
+.slideTxt .hd ul li span {
+    display: block;
+    width: 92px;
+    height: 24px;
+    line-height: 24px;
+    margin-top: 6px;
+    font-size: 14px;
+}
+.slideTxt .hd ul li.on {
+    height: 30px;
+}
+.slideTxt .hd ul li.on span {
+    background: #66c8e8;
+    border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    -ms-border-radius: 5px 5px 0 0;
+    -o-border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+}
+.slideTxt .hd ul .end {
+    background: 0;
+}
+/*新闻主文内容*/
+.slideTxt .item-pic {
+    position: relative;
+    border: 0;
+    width: 100%;
+    height: 450px;
+}
+.slideTxt .bd .item-txt li {
+    height: 22px;
+    border-bottom: 1px dashed #d9d9d9;
+    padding: 8px 0 8px 10px;
+    overflow: hidden;
+    zoom: 1;
+    float: left;
+    width: 608px;
+}
+.slideTxt .num {
+    display: block;
+    width: 16px;
+    height: 16px;
+    float: left;
+    margin: 2px 10px 0 0;
+    line-height: 16px;
+    color: #fff;
+    font-family: Tahoma;
+    text-align: center;
+    background: url(../img/icon.png) no-repeat;
+    background-position: 0 0;
+}
+.slideTxt .bd .info {
+    float: left;
+    width: 470px;
+    height: 22px;
+    line-height: 22px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.slideTxt .bd .item-txt li a {
+    font-size: 14px;
+    color: #333;
+    margin-right: 5px;
+}
+.slideTxt .bd .time {
+    float: right;
+    height: 22px;
+    line-height: 22px;
+    padding-right: 10px;
+}
+.slideTxt .bd .bgc {
+    background: #eef1f8;
+}
+
+.footer {
+    height: 60px;
+    line-height: 20px;
+    padding: 20px 0;
+    border-top: 2px solid #468dcd;
+    background: #f6f6f6;
+    margin-top: 10px;
+    text-align: center;
+    color: #999;
+    font-size: 12px;
+    font-family: Tahoma,"宋体";
+}
+
+
+

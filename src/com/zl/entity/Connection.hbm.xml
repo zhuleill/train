@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.zl.entity.Connection" table="connection">
+		<id name="conid" column="conid">
+			<generator class="native"></generator>
+		</id>
+		<property name="uid"></property>
+		<property name="realname"></property>
+		<property name="sex"></property>
+		<property name="cardtype"></property>
+		<property name="cardnumber"></property>
+		<property name="tel"></property>
+		<property name="email"></property>
+	</class>
+</hibernate-mapping>  
